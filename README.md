@@ -8,7 +8,8 @@
 
 - **Included:** Android Java/XML source code, real trained `.tflite` neural-network file, matching vocabulary, Gradle configuration, learning/training code, model documentation and tests.
 - **Checked here:** XML parsing, Java syntax/type check against local Android API stubs, Java-versus-Python feature-vector parity, TFLite FlatBuffer structural and weight checks, desktop neural-network inference.
-- **NOT checked:** Actual Android Gradle Sync, generated APK, real Android device/emulator inference, native-library ELF/ZIP alignment of the *built APK*, screenshot evidence. Those checks require Android Studio on your Windows 11 PC.
+- - **Verified by student in Android Studio:** Gradle Sync, successful app launch on the emulator, spam and normal-message predictions, offline inference, empty-input handling, and genuine emulator screenshots.
+- **Still pending verification:** Native-library ELF alignment, APK ZIP alignment for 16 KB memory pages, and testing on a compatible 16 KB page-size device.
 - **Model limitation:** Training sentences are **original author-written synthetic templates**; they are not the UCI SMS Spam Collection or a representative modern scam dataset. Scores are not calibrated probabilities, and the model can make incorrect security classifications. **Do not rely on it to decide whether a link or request is safe.**
 
 ## How to run on Windows 11
@@ -126,7 +127,7 @@ It writes a **comparison** model under `ml/` and does not overwrite the deployed
 
 **Instructor reference repository:** https://github.com/Uzair390-Del/NumberGuessingAppTflite.git
 
-This is a **separate Java implementation**. We acknowledge the provided project as the assignment reference, but **do not claim that its code was executed or personally examined in Android Studio**. To meet Part B Tasks 1–2 you must clone the reference repo, open and run it, inspect the *actual* model-loading/inference logic, and collect genuine evidence. A study worksheet is in `docs/ORIGINAL_REPOSITORY_STUDY.md`.
+The instructor's reference project, NumberGuessingAppTflite, has been opened, explored, and executed successfully in Android Studio. Its project structure, MainActivity, TensorFlow Lite model (linear.tflite), and inference workflow have been studied. Spam Shield was developed separately using these concepts as a reference.`docs/ORIGINAL_REPOSITORY_STUDY.md`.
 
 Once Spam Shield runs on your PC, upload this project to your own GitHub repository and capture actual app results. Then prepare the theory PDF, practical PDF, and code-explanation PDF from the verified project, referencing the original repo and **the educational synthetic-data limitation**. Details in `docs/GITHUB_UPLOAD.md`.
 
