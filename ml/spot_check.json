@@ -1,0 +1,92 @@
+[
+  {
+    "text": "URGENT! You have won a cash prize. Click https://example.com/claim now!",
+    "expected": "spam",
+    "spam_score": 1.0
+  },
+  {
+    "text": "Hi, the class starts at 9 tomorrow. Please bring your assignment notebook.",
+    "expected": "normal",
+    "spam_score": 0.0
+  },
+  {
+    "text": "Your account will be locked. Click now to verify your password.",
+    "expected": "spam",
+    "spam_score": 1.0
+  },
+  {
+    "text": "Can you send the project report to me today?",
+    "expected": "normal",
+    "spam_score": 0.0001
+  },
+  {
+    "text": "Your parcel is on hold. Pay a redelivery fee at www.fake.example/pay",
+    "expected": "spam",
+    "spam_score": 1.0
+  },
+  {
+    "text": "I will meet you at the library after lunch.",
+    "expected": "normal",
+    "spam_score": 0.0
+  },
+  {
+    "text": "You are selected to receive a cash reward. Claim immediately.",
+    "expected": "spam",
+    "spam_score": 0.99994
+  },
+  {
+    "text": "Our practical exam begins at nine, please arrive early.",
+    "expected": "normal",
+    "spam_score": 0.00028
+  },
+  {
+    "text": "Final notice: your payment is overdue, click this link now.",
+    "expected": "spam",
+    "spam_score": 0.99889
+  },
+  {
+    "text": "Mom I reached home safely and will call you soon.",
+    "expected": "normal",
+    "spam_score": 0.00046
+  },
+  {
+    "text": "Please share the Android slides for the group discussion.",
+    "expected": "normal",
+    "spam_score": 0.00099
+  },
+  {
+    "text": "Your OTP is 123456. Do not share it with anyone.",
+    "expected": "normal",
+    "spam_score": 6e-05
+  },
+  {
+    "text": "You won a free phone. Text WIN to 88122 to collect it.",
+    "expected": "spam",
+    "spam_score": 1.0
+  },
+  {
+    "text": "Hi Sam, are you coming to the workshop tomorrow?",
+    "expected": "normal",
+    "spam_score": 0.00049
+  },
+  {
+    "text": "Get rich quickly by joining our investment scheme today.",
+    "expected": "spam",
+    "spam_score": 0.99504
+  },
+  {
+    "text": "Thanks for the invitation, I will join the meeting.",
+    "expected": "normal",
+    "spam_score": 0.00088
+  },
+  {
+    "text": "Your order has been delivered to reception.",
+    "expected": "normal",
+    "spam_score": 0.0002
+  },
+  {
+    "text": "Bank alert: click here or your account will be suspended.",
+    "expected": "spam",
+    "spam_score": 0.99954
+  }
+]

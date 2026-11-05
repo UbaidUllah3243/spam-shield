@@ -1,0 +1,11 @@
+<resources>
+    <color name="navy">#142D41</color>
+    <color name="teal">#087F77</color>
+    <color name="teal_light">#DDF7F0</color>
+    <color name="surface">#F5F8FA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="muted">#607386</color>
+    <color name="danger">#CE4C58</color>
+    <color name="safe">#168B6B</color>
+    <color name="amber">#B47816</color>
+</resources>

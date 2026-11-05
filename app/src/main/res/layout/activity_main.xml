@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:fillViewport="true"
+    android:clipToPadding="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/primary_button"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="@color/white"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:contentDescription="Spam Shield" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/navy"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI · Message screening"
+                    android:textColor="@color/muted"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/normal_chip"
+                android:text="● OFFLINE"
+                android:textSize="11sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/hero"
+            android:padding="22dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✦  YOUR MESSAGE GUARD"
+                android:textColor="#B9EEE1"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/hero_title"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/hero_subtitle"
+                android:textColor="#D5EDEB"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white_card"
+            android:padding="18dp"
+            android:layout_marginBottom="14dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01  ·  Message to check"
+                android:textColor="@color/navy"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/modelStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Loading local AI model..."
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_box"
+                android:padding="14dp"
+                android:hint="@string/message_hint"
+                android:gravity="top|start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:scrollbars="vertical"
+                android:maxLength="500"
+                android:minLines="4"
+                android:textSize="15sp"
+                android:textColor="@color/navy"
+                android:textColorHint="#8599A5" />
+            <TextView
+                android:id="@+id/characterCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="end"
+                android:text="0 / 500"
+                android:textColor="@color/muted"
+                android:textSize="11sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="TRY AN EXAMPLE"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/spamExample"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:background="@drawable/spam_chip"
+                    android:text="⚠  Spam example"
+                    android:textColor="#AD3F46"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+                <TextView
+                    android:id="@+id/normalExample"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="7dp"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:background="@drawable/normal_chip"
+                    android:text="✓  Normal example"
+                    android:textColor="#087F77"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/analyzeButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/analyze"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/primary_button" />
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/clear"
+                android:textAllCaps="false"
+                android:textColor="@color/navy"
+                android:background="@drawable/secondary_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/resultPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/white_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02  ·  AI assessment"
+                android:textColor="@color/navy"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/verdictSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="⚠"
+                android:textColor="@color/danger"
+                android:textSize="32sp" />
+            <TextView
+                android:id="@+id/verdictTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Likely spam"
+                android:textSize="24sp"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/verdictDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="This is a model estimate, not proof."
+                android:textColor="@color/muted"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estimated spam score"
+                    android:textColor="@color/navy"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/spamPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/danger"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/spamBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                android:progress="0"
+                android:max="100"
+                android:progressTint="@color/danger"
+                android:progressBackgroundTint="#EBF0F4" />
+            <TextView
+                android:id="@+id/normalPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Normal score: 0%"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/featureCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/securityAdvice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:padding="13dp"
+                android:background="@drawable/input_box"
+                android:text="Never share passwords or OTPs based only on a text message."
+                android:textSize="13sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/navy" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/privacy"
+            android:textSize="12sp"
+            android:textColor="@color/muted" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="Educational AI demo · English SMS only · results may be wrong"
+            android:textSize="11sp"
+            android:textColor="@color/muted" />
+    </LinearLayout>
+</ScrollView>

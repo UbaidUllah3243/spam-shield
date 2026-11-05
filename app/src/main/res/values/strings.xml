@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Spam Shield</string>
+    <string name="title">Spam Shield</string>
+    <string name="hero_title">Check before you click.</string>
+    <string name="hero_subtitle">Paste a suspicious message. Get an on-device AI estimate in seconds.</string>
+    <string name="message_hint">Paste or type an SMS message here...</string>
+    <string name="analyze">Analyze message</string>
+    <string name="clear">Clear</string>
+    <string name="spam_example">Spam example</string>
+    <string name="safe_example">Normal example</string>
+    <string name="result_heading">AI analysis</string>
+    <string name="privacy">Private by design · no SMS access · no internet required</string>
+</resources>

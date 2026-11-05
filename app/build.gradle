@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ubaid.spamshield'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.ubaid.spamshield'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // Native .so libraries must be 16 KB-aligned BOTH in the APK and in ELF LOAD segments.
+    // AGP 8.7.3 handles 16 KB ZIP packaging; LiteRT 1.4.2 contains aligned native binaries.
+    packaging {
+        jniLibs { useLegacyPackaging = false }
+    }
+
+    buildTypes { release { minifyEnabled false } }
+}
+
+dependencies {
+    // Retains the Java org.tensorflow.lite.Interpreter API, with 16 KB-supporting runtime.
+    // Do NOT add old org.tensorflow:tensorflow-lite:2.17.0 at the same time.
+    implementation 'com.google.ai.edge.litert:litert:1.4.2'
+    implementation 'com.google.ai.edge.litert:litert-api:1.4.2'
+    testImplementation 'junit:junit:4.13.2'
+}

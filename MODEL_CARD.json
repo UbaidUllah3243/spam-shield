@@ -1,0 +1,41 @@
+{
+  "project": "Spam Shield",
+  "student": "Ubaid Ullah",
+  "registration": "242201064",
+  "instructor": "Sir Uzair",
+  "dataset": "Author-written, synthetic educational SMS templates; NOT UCI SMS collection",
+  "model": "PyTorch-trained binary-bag-of-unigrams/bigrams -> 40 ReLU -> 2 softmax",
+  "classes": [
+    "Normal",
+    "Spam"
+  ],
+  "training_examples": 2232,
+  "holdout_examples": 558,
+  "holdout_accuracy_with_template_overlap": 1.0,
+  "synthetic_confusion_matrix": [
+    [
+      298,
+      0
+    ],
+    [
+      0,
+      260
+    ]
+  ],
+  "small_authored_spot_check_correct": 18,
+  "small_authored_spot_check_total": 18,
+  "model_input_shape": [
+    1,
+    1197
+  ],
+  "model_output_shape": [
+    1,
+    2
+  ],
+  "input_dtype": "float32",
+  "output_dtype": "float32",
+  "normalization": "URL=>urltoken; 5+ digit number=>numbertoken; currency symbols=>moneytoken; binary word/bigram presence",
+  "model_size_bytes": 193224,
+  "export_method": "TFLite FlatBuffer built from trained neural network weights",
+  "limitations": "Not a real SMS corpus, tests share authored pattern families; confidence scores not calibrated, not guaranteed to spot malicious SMS. Short English only, vulnerable to obfuscation and unseen scams."
+}
